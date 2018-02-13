@@ -1,0 +1,28 @@
+#RESULTS {
+    text-align: center;
+}
+
+span {
+    color: white;
+    font-size: 18px;
+}
+
+#RESULTS label, span, h2 {
+    display: inline-block;
+    color: gold;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+span {
+    width: 30%;
+    text-align: left;
+}
+
+label + span {
+    width: 30%;
+    margin: 0 30% 0 4%;
+}

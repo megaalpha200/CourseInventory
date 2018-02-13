@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Course</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/searchcourse.css" type="text/css" rel="stylesheet" />
+        <script src="assets/javascript/page_nav.js" type="text/javascript"></script>
+        <script src="assets/javascript/form_processing.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Course Inventory Search</h1>
+        <form id="SEARCH_FORM" action="/searchcourse" method="POST">
+            <label for="Course_Number">Course Number:</label>
+            <input name="COURSE_NUMBER" id="COURSE_NUMBER" type="text" /> <br />
+            <div class="buttonHolder">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <div class="buttonHolder">
+            <button id="BACK">Go Back to Menu</button>
+        </div>
+        <br />
+        <% if (data.resultsFound && data.show) { %>
+            <div id="RESULTS">
+                <h2>Search Results</h2><br />
+                <label for="Course_Number">Course Number: </label><span><%= data.formData.COURSE_NUMBER %></span> <br />
+                <label for="Course_Title">Course Title: </label><span><%= data.formData.COURSE_TITLE %></span><br />
+                <label for="Credit_Hours">Credit Hours: </label><span><%= data.formData.CREDIT_HOURS %></span> <br />
+            </div>
+        <% } else if (data.show) { %>
+            <p>No Results Found!</p>
+        <% } %>
+    </body>
+</html>
