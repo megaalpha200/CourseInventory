@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //Intercepts the addCourse form submission to process form data, then posts it back to the page
     $("#ADD_FORM").submit(function() {
         var course_num = $("#COURSE_NUMBER").val();
         var course_title = $("#COURSE_TITLE").val();
