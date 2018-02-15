@@ -12,11 +12,6 @@ p {
     font-size: 18px;
 }
 
-label {
-    color: white;
-    font-size: 18px;
-}
-
 .buttonHolder {
     margin-top: 2%;
     text-align: center;
@@ -53,6 +48,8 @@ label, input {
 label {
     width: 30%;
     text-align: right;
+    color: white;
+    font-size: 18px;
 }
 
 label + input {
